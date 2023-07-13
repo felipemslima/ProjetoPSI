@@ -1,0 +1,148 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous" type="text/javascript" charset="utf-8"></script>
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"" type="text/javascript" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/chart-device-data.js" type="text/javascript" charset="utf-8"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    
+    <!--CODIGO RICK-->
+    <title>App</title>
+</head>
+
+<body>
+    <header class="frontPage">
+        <fieldset class="ServerConnect">
+            <legend>Projeto 2023</legend>
+            <div>
+                <h1>PSI3541: Smart Home</h1>
+            </div>
+            <div class="mylabel">
+                <input type="checkbox" id="coding">
+                <div class="slidinggroove"></div>
+                <label for="coding" name="skills" class="mylabel"></label>
+            </div>
+        </fieldset>
+        <fieldset class="DataHora">
+            <legend>Data&Hour</legend>
+            <div class="datahour">
+                <div id="date"></div>
+                <div id="time"></div>
+            </div>
+        </fieldset>
+    </header>
+    <main>
+        <div id="mainContent">
+            <fieldset class="lights">
+                <legend>Lights</legend>
+                <div class="mylabel">
+                    <input type="checkbox" id="light1">
+                    <div class="slidinggroove"></div>
+                    <label for="light1" name="skills" class="mylabel"></label>
+                </div>
+                <div class="mylabel">
+                    <input type="checkbox" id="light2">
+                    <div class="slidinggroove"></div>
+                    <label for="light2" name="skills" class="mylabel"></label>
+                </div>
+                <div class="mylabel">
+                    <input type="checkbox" id="light3">
+                    <div class="slidinggroove"></div>
+                    <label for="light3" name="skills" class="mylabel"></label>
+                </div>
+                <div class="mylabel">
+                    <input type="checkbox" id="light4">
+                    <div class="slidinggroove"></div>
+                    <label for="light4" name="skills" class="mylabel"></label>
+                </div>
+                <div class="mylabel">
+                    <input type="checkbox" id="light5">
+                    <div class="slidinggroove"></div>
+                    <label for="light5" name="skills" class="mylabel"></label>
+                </div>
+                <div class="mylabel">
+                    <input type="checkbox" id="light6">
+                    <div class="slidinggroove"></div>
+                    <label for="light6" name="skills" class="mylabel"></label>
+                </div>
+                <div class="mylabel">
+                    <input type="checkbox" id="light7">
+                    <div class="slidinggroove"></div>
+                    <label for="light7" name="skills" class="mylabel"></label>
+                </div>
+                <div class="mylabel">
+                    <input type="checkbox" id="light8">
+                    <div class="slidinggroove"></div>
+                    <label for="light8" name="skills" class="mylabel"></label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Temperature</legend>
+                <div class="temp">
+                    <fieldset>
+                        <legend>Heater</legend>
+                        <div>
+                            <span>Turn On time</span>
+                        <select name="" id="ONselector">
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                        </select>
+                        <span>Turn Off time</span>
+                        <select name="" id="OFFselector">
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="button" id="heaterbutton"><span>Apply</span></button>
+                    </div>
+                    <div>
+                        <p> Your heater will turn on at
+                            <span class="outputON"></span>
+                            and it will turn off at
+                            <span class="outputOFF"></span>
+                        </p>
+                    </div>
+                </fieldset>
+                <div class="thermostato">
+                    <div id="temperature"></div>
+                    <span>Degrees Celcius</span>
+                </div>
+            </div>
+            </fieldset> 
+        </div>
+    </main>
+    <h1 class="flexHeader">
+        <span>
+            <span id="deviceCount">0 devices</span>
+            <select id="listOfDevices" class="select_box"></select>
+        </span>
+        <span>Temperature & Humidity Real-time Data</span>
+    </h1>
+    <div>
+        <canvas id="iotChart"></canvas>
+    </div>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>
